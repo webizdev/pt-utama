@@ -64,6 +64,13 @@ if (!$webData) {
                     
                     <label>Nomor SK IUP (Legalitas)</label>
                     <input type="text" name="iup" value="<?php echo htmlspecialchars($webData['iup']); ?>" class="input-box">
+
+                    <h3 class="text-xs font-black text-amber-500 mt-8 mb-6 uppercase italic tracking-[0.2em]">Optimasi SEO</h3>
+                    <label>Meta Description (Deskripsi di Google)</label>
+                    <textarea name="seoDesc" class="input-box" rows="3"><?php echo htmlspecialchars($webData['seoDesc'] ?? ''); ?></textarea>
+                    
+                    <label>Meta Keywords (Pisahkan dengan koma)</label>
+                    <textarea name="seoKey" class="input-box" rows="2"><?php echo htmlspecialchars($webData['seoKey'] ?? ''); ?></textarea>
                 </div>
                 <div class="bg-[#1a1a1a] p-8 border border-white/10 shadow-sm">
                     <h3 class="text-xs font-black text-amber-500 mb-6 uppercase italic tracking-[0.2em]">Konten Hero</h3>

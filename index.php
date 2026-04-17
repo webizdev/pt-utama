@@ -31,6 +31,56 @@ $pageTitle = "PT " . $webData['brand'] . " | Material Jalan & Beton - Suplier An
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($pageTitle); ?></title>
     
+    <?php
+        $seoDesc = $webData['seoDesc'] ?? "PT UTAMA - Supplier Andesit & Material Jalan terbaik di Riau. Melayani kebutuhan konstruksi jalan dan beton di Indragiri Hulu, Rengat, Inhu, Tembilahan, dan Pekanbaru. Hubungi: " . $webData['wa'];
+        $seoKey = $webData['seoKey'] ?? "andesit riau, supplier material jalan inhu, jual batu split rengat, quarry andesit batang gansal, material agregat riau, pt utama andesit";
+        $currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    ?>
+    <meta name="description" content="<?php echo htmlspecialchars($seoDesc); ?>">
+    <meta name="keywords" content="<?php echo htmlspecialchars($seoKey); ?>">
+    <link rel="canonical" href="<?php echo htmlspecialchars($currentUrl); ?>">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?php echo htmlspecialchars($currentUrl); ?>">
+    <meta property="og:title" content="<?php echo htmlspecialchars($pageTitle); ?>">
+    <meta property="og:description" content="<?php echo htmlspecialchars($seoDesc); ?>">
+    <meta property="og:image" content="img/og-image.webp">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "PT UTAMA",
+      "image": "img/og-image.webp",
+      "@id": "<?php echo $currentUrl; ?>",
+      "url": "<?php echo $currentUrl; ?>",
+      "telephone": "<?php echo $webData['wa']; ?>",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Desa Usul, Kec. Batang Gansal",
+        "addressLocality": "Indragiri Hulu",
+        "addressRegion": "Riau",
+        "postalCode": "29371",
+        "addressCountry": "ID"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -0.6922258,
+        "longitude": 102.4342417
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      }
+    }
+    </script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">

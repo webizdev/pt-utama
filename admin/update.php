@@ -16,6 +16,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         "heroImg" => $_POST['heroImg'] ?? '',
         "wa" => $_POST['wa'] ?? '',
         "iup" => $_POST['iup'] ?? '',
+        "seoDesc" => $_POST['seoDesc'] ?? '',
+        "seoKey" => $_POST['seoKey'] ?? '',
         "products" => [],
         "gallery" => $_POST['gallery'] ?? []
     ];
