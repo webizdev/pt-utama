@@ -1,0 +1,11 @@
+# PHP & Git Ignore for PT UTAMA
+# Database Backup
+database.sql
+
+# Admin sessions / temp
+.sessions/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
