@@ -82,8 +82,15 @@ $pageTitle = "PT " . $webData['brand'] . " | Material Jalan & Beton - Suplier An
     }
     </script>
     
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- LCP Preload -->
+    <link rel="preload" as="image" href="<?php echo htmlspecialchars($webData['heroImg']); ?>" fetchpriority="high">
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     
     <style>
