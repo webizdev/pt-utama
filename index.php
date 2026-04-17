@@ -89,35 +89,28 @@ $pageTitle = "PT " . $webData['brand'] . " | Material Jalan & Beton - Suplier An
     <!-- LCP Preload -->
     <link rel="preload" as="image" href="<?php echo htmlspecialchars($webData['heroImg']); ?>" fetchpriority="high">
     
-    <!-- Performance Optimization: Static CSS & Essential Styles -->
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    
-    <!-- Deferred Secondary Resources -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript>
-        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    </noscript>
-
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
     <style>
-        /* CRITICAL CSS: Inline to prevent blank screen and layout shift */
         html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; background-color: #0f0f0f; color: #e5e5e5; margin: 0; opacity: 1; }
+        body { font-family: 'Inter', sans-serif; background-color: #0f0f0f; color: #e5e5e5; margin: 0; }
         h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; letter-spacing: -0.02em; }
         
-        /* Layout Fixes for Mobile Speed */
-        #website-view { display: block !important; }
-        
-        /* Utilities */
         .tab-content { display: none; }
         .tab-content.active { display: block; }
+        
         .tab-btn { color: #525252; transition: all 0.3s; }
+        .tab-btn:hover { color: #d4d4d4; }
         .tab-btn.active { border-bottom: 4px solid #f59e0b; color: #ffffff; font-weight: 800; }
+        
         .card-produk { background: #1a1a1a; border: 1px solid #333; transition: all 0.3s ease; position: relative; }
         .card-produk:hover { border-color: #f59e0b; transform: translateY(-4px); box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.2); }
         .img-container { width: 100%; aspect-ratio: 1 / 1; overflow: hidden; background: #262626; border-bottom: 1px solid #333; }
         .img-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; filter: grayscale(20%); }
         .card-produk:hover img { transform: scale(1.1); filter: grayscale(0%); }
+
         .map-container { position: relative; width: 100%; height: 100%; min-height: 200px; border-radius: 4px; overflow: hidden; filter: grayscale(1) invert(1) contrast(1.2); border: 1px solid #333; }
     </style>
 </head>
