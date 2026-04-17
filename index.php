@@ -151,7 +151,7 @@ $pageTitle = "PT " . $webData['brand'] . " | Material Jalan & Beton - Suplier An
                 </div>
                 <div class="rounded-sm overflow-hidden shadow-2xl bg-[#262626] aspect-video border border-white/10 relative group">
                     <div class="absolute inset-0 border-2 border-amber-500/20 z-20 pointer-events-none"></div>
-                    <img src="<?php echo htmlspecialchars($webData['heroImg']); ?>" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-500">
+                    <img src="<?php echo htmlspecialchars($webData['heroImg']); ?>" width="800" height="450" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-500">
                 </div>
             </div>
         </section>
