@@ -30,6 +30,7 @@ $pageTitle = "PT " . $webData['brand'] . " | Material Jalan & Beton - Suplier An
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($pageTitle); ?></title>
+    <meta name="google-site-verification" content="R400STv-oZo7-XP6E9nQXh6P3JFlTBMla0im7XMxkVI" />
     
     <?php
         $seoDesc = $webData['seoDesc'] ?? "PT UTAMA - Supplier Andesit & Material Jalan terbaik di Riau. Melayani kebutuhan konstruksi jalan dan beton di Indragiri Hulu, Rengat, Inhu, Tembilahan, dan Pekanbaru. Hubungi: " . $webData['wa'];
